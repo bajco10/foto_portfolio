@@ -1,1 +1,230 @@
-<!DOCTYPE html><html><body style="background: black; color: white;"><h1>test githubpages xd</h1></body></html>
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotografka | Meno Priezvisko</title>
+    <style>
+        /* === ZÁKLADNÉ NASTAVENIA === */
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #1a1a1a;
+            --accent-color: #555555;
+            --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        ul { list-style: none; }
+        
+        /* === HLAVIČKA / HERO SEKCE === */
+        header {
+            height: 90vh; /* Na takmer celu vysku obrazovky */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), 
+                        url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 300;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        p.subtitle {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            font-style: italic;
+        }
+
+        .btn {
+            margin-top: 2rem;
+            padding: 10px 30px;
+            border: 1px solid var(--text-color);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.8rem;
+        }
+        .btn:hover { background-color: var(--text-color); color: white; }
+
+        /* === SPOLOČNÉ PRE SEKCIE === */
+        section { padding: 4rem 10%; }
+        h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        /* === PORTFOLIO (GRID) === */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+        }
+
+        .photo-item {
+            position: relative;
+            height: 300px; /* Fixná výška kachličiek */
+            overflow: hidden;
+            background-color: #eee;
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .photo-item:hover img { transform: scale(1.05); }
+
+        /* === CENNÍK === */
+        .pricing-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .price-card {
+            border: 1px solid #eee;
+            padding: 2rem;
+            text-align: center;
+            flex: 1;
+            min-width: 250px;
+            max-width: 350px;
+        }
+
+        .price-card h3 { margin-bottom: 1rem; font-weight: 400; }
+        .price { font-size: 1.5rem; font-weight: bold; margin-bottom: 1.5rem; display: block; }
+        .price-card ul li { margin-bottom: 0.5rem; color: #666; font-size: 0.9rem; }
+
+        /* === KONTAKT === */
+        .contact-box {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: #f9f9f9;
+        }
+        
+        .contact-item { margin: 1rem 0; font-size: 1.1rem; }
+        .socials { margin-top: 2rem; }
+        .socials a { margin: 0 10px; font-weight: bold; }
+
+        /* === FOOTER === */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #1a1a1a;
+            color: #fff;
+            font-size: 0.8rem;
+        }
+
+        /* === MEDIA QUERIES (MOBIL) === */
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            section { padding: 3rem 5%; }
+            header { height: 70vh; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Meno Priezvisko</h1>
+        <p class="subtitle">Profesionálna fotografia • Portréty • Svadby</p>
+        <a href="#kontakt" class="btn">Kontaktovať</a>
+    </header>
+
+    <section id="portfolio">
+        <h2>Vybrané práce</h2>
+        <div class="gallery-grid">
+            <div class="photo-item"><img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Foto 1"></div>
+            <div class="photo-item"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Foto 2"></div>
+            <div class="photo-item"><img src="https://images.unsplash.com/photo-1520854221256-17451cc330e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Foto 3"></div>
+            <div class="photo-item"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Foto 4"></div>
+            <div class="photo-item"><img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Foto 5"></div>
+            <div class="photo-item"><img src="https://images.unsplash.com/photo-1505934338179-8ef8f43a7d53?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Foto 6"></div>
+        </div>
+    </section>
+
+    <section id="cennik" style="background-color: #fcfcfc;">
+        <h2>Orientačný Cenník</h2>
+        <div class="pricing-container">
+            <div class="price-card">
+                <h3>Portrét / Rodina</h3>
+                <span class="price">100 €</span>
+                <ul>
+                    <li>1 hodina fotenia</li>
+                    <li>10 upravených fotografií</li>
+                    <li>Online galéria</li>
+                </ul>
+            </div>
+            <div class="price-card" style="border-color: #333; transform: scale(1.05); background: white;">
+                <h3>Svadba - Štandard</h3>
+                <span class="price">600 €</span>
+                <ul>
+                    <li>Fotenie obradu a portrétov</li>
+                    <li>3 hodiny fotenia</li>
+                    <li>100+ upravených fotografií</li>
+                    <li>Tlačené fotografie (20ks)</li>
+                </ul>
+            </div>
+            <div class="price-card">
+                <h3>Svadba - Premium</h3>
+                <span class="price">1200 €</span>
+                <ul>
+                    <li>Celý svadobný deň</li>
+                    <li>Od príprav až po čepčenie</li>
+                    <li>400+ upravených fotografií</li>
+                    <li>USB kľúč + Fotokniha</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt">
+        <h2>Kontakt</h2>
+        <div class="contact-box">
+            <p>Máte záujem o fotenie? Napíšte mi alebo zavolajte.</p>
+            <br>
+            <div class="contact-item">
+                <strong>Email:</strong> ukazka@mail.cz
+            </div>
+            <div class="contact-item">
+                <strong>Tel:</strong> +420 xxx xxx xxx
+            </div>
+            <div class="socials">
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 Meno Priezvisko Photography.
+    </footer>
+
+</body>
+</html>
